@@ -105,6 +105,55 @@ Replace `/path/to/gcp-mcp` with the actual path to your project directory if usi
 
 2. Refresh your AI assistant (Claude Desktop/Cursor/Windsurf)
 
+#### Alternative: Service Account Key File (For production or automated environments)
+
+If you prefer to use a service account instead of your personal credentials:
+
+1. Configure your MCP client to use the service account key file:
+
+**For Claude Desktop:**
+```json
+{
+  "mcpServers": {
+    "gcp": {
+      "command": "sh",
+      "args": ["-c", "npx -y gcp-mcp"],
+      "env": {
+        "GOOGLE_APPLICATION_CREDENTIALS": "/Users/yourusername/gcp-mcp-key.json"
+      }
+    }
+  }
+}
+```
+
+**For Cursor:**
+```json
+{
+  "gcp": {
+    "command": "npx -y gcp-mcp",
+    "env": {
+      "GOOGLE_APPLICATION_CREDENTIALS": "/Users/yourusername/gcp-mcp-key.json"
+    }
+  }
+}
+```
+
+**For Windsurf:**
+```json
+{
+  "mcpServers": {
+    "gcp": {
+      "command": "npx -y gcp-mcp",
+      "env": {
+        "GOOGLE_APPLICATION_CREDENTIALS": "/Users/yourusername/gcp-mcp-key.json"
+      }
+    }
+  }
+}
+```
+
+2. Refresh your AI assistant (Claude Desktop/Cursor/Windsurf)
+
 ## Usage
 
 Start by selecting a project or asking questions like:
