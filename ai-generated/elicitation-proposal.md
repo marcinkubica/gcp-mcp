@@ -292,3 +292,7 @@ class KnowledgeElicitationSystem:
 | **Cost** | Training infrastructure | Storage + retrieval |
 
 This approach gives you the benefits of leveraging larger model capabilities while maintaining the flexibility and cost-effectiveness of smaller models, without the complexity of model training. 
+
+
+# Existing papers (user found)
+https://arxiv.org/abs/2404.16045
